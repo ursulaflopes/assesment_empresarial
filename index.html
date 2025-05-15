@@ -1,25 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Teste de Áreas</title>
+  <title>Diagnóstico Empresarial</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
-    <h1>Teste de Áreas</h1>
-    <form id="quizForm">
-      <div id="questions"></div>
-      <button type="submit">Ver Resultado</button>
-    </form>
+    <img src="images/logo_mattarello.png" alt="Mattarello Logo" class="logo">
+    <h1>Diagnóstico Empresarial</h1>
+    <p>Bem-vindo! Este diagnóstico foi desenvolvido para te ajudar a avaliar seu negócio nas principais áreas estratégicas: Marketing, Precificação, Vendas e Finanças.</p>
+    <p>Com base nas suas respostas, você receberá uma análise simples e objetiva para cada área, com sugestões práticas para melhorar seus resultados.</p>
 
-    <div id="result" class="hidden">
-      <h2>Resultado</h2>
-      <div id="output"></div>
-    </div>
+    <form id="inicioForm">
+      <label><br/>Nome: <input type="text" id="nome" name="nome"></label><br/>
+      <label>E-mail (opcional): <input type="email" id="email" name="email"></label><br/><br/>
+      <button type="submit">Iniciar Diagnóstico</button>
+    </form>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('inicioForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      localStorage.setItem('nomeUsuario', nome);
+      window.location.href = 'marketing.html';
+    });
+  </script>
 </body>
 </html>

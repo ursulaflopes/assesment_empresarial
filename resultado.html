@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultado do Diagnóstico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    pre {
+      white-space: pre-wrap;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    #nomeUsuario {
+      text-align: left;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      text-align: left;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1px;
+    }
+    .logo {
+      max-width: 50px;
+      height: 80px;
+    }
+    h2 {
+      text-align: left;
+    }
+    .bloco-area {
+      margin-bottom: 40px;
+    }
+    .bloco-area ul {
+      padding-left: 20px;
+    }
+    button {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Resultado do Diagnóstico Empresarial</h1>
+    </div>
+    <p id="nomeUsuario"></p><br>
+    <div id="analises"></div>
+    <button onclick="window.history.back()">Voltar</button>
+  </div>
+  <script src="script_resultado.js"></script>
+</body>
+</html>
